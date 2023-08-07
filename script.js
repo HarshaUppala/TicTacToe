@@ -5,6 +5,14 @@ let gameover = false;
 musicBG.play();
 musicBG.volume = 0.1;
 
+function toggle(image) {
+    if (image.getAttribute('src') == "./iconmusicoff.svg") {
+      image.setAttribute('src', './iconmusic.svg');
+    } else {
+      image.setAttribute('src', './iconmusicoff.svg');
+    }
+  }
+
 //Changes the turn
 const changeTurn = () => {
     return turn === "X"?"O":"X"
